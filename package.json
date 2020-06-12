@@ -6,6 +6,7 @@
   "types": "dist/types.d.ts",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
     "lint": "yarn type-check && tslint --project tsconfig.json -t codeFrame 'src/**/*.ts*'",
     "test": "yarn lint && yarn jest --coverage",
     "test:watch": "yarn lint && yarn jest --coverage --watch",
