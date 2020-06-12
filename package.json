@@ -1,6 +1,23 @@
 {
   "name": "fp-ts-jest-matchers",
-  "peerDependencies": {
-    "fp-ts": "^2.5.0"
+  "scripts": {
+    "test": "yarn jest --coverage"
+  },
+  "dependencies": {
+    "expect": "^24.9.0",
+    "fp-ts": "^2.5.0",
+    "jest-diff": "^24.0.0",
+    "jest-matcher-utils": "^25.5.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.0",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.1.0",
+    "typescript": "^3.9.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": ["/dist/"]
   }
 }
