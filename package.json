@@ -2,6 +2,14 @@
   "name": "fp-ts-jest-matchers",
   "version": "1.0.0",
   "description": "Jest matchers to nicely test code using fp-ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svdo/fp-ts-jest-matchers.git"
+  },
+  "homepage": "https://github.com/svdo/fp-ts-jest-matchers",
+  "bugs": {
+    "url": "https://github.com/svdo/fp-ts-jest-matchers/issues"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
