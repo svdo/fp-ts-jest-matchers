@@ -1,7 +1,11 @@
 {
   "name": "fp-ts-jest-matchers",
   "scripts": {
-    "test": "yarn jest --coverage"
+    "lint": "yarn type-check && tslint --project tsconfig.json -t codeFrame 'src/**/*.ts*'",
+    "test": "yarn lint && yarn jest --coverage",
+    "test:watch": "yarn lint && yarn jest --coverage --watch",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "yarn type-check --watch"
   },
   "dependencies": {
     "expect": "^24.9.0",
@@ -12,7 +16,12 @@
   "devDependencies": {
     "@types/jest": "^26.0.0",
     "jest": "^26.0.1",
+    "lint": "^0.7.0",
+    "prettier": "^2.0.5",
     "ts-jest": "^26.1.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^9.0.0",
     "typescript": "^3.9.0"
   },
   "jest": {
