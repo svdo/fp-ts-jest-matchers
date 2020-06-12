@@ -11,6 +11,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "yarn type-check && tslint --project tsconfig.json -t codeFrame 'src/**/*.ts*'",
+    "prepublishOnly": "yarn lint && yarn test && yarn build",
     "test": "yarn lint && yarn jest --coverage",
     "test:watch": "yarn lint && yarn jest --coverage --watch",
     "type-check": "tsc --noEmit",
