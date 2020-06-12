@@ -2,7 +2,8 @@ import {
   toBeNoneMatcher,
   toBeSomeMatcher,
   toBeLeftMatcher,
-  toBeRightMatcher
+  toBeRightMatcher,
+  formattedDiffString
 } from './fp-ts-jest-matchers'
 import * as O from 'fp-ts/lib/Option'
 import * as E from 'fp-ts/lib/Either'
@@ -25,6 +26,12 @@ describe('toBeNone', () => {
 describe('toBeSome', () => {
   it('fails on none', () => {
     const { pass, message } = toBeSomeMatcher(true, O.none, 'value')
+    expect(pass).toBeFalsy()
+    expect(message()).toContain('expected to be some, but was none')
+  })
+
+  it('fails on none without checking value', () => {
+    const { pass, message } = toBeSomeMatcher(true, O.none)
     expect(pass).toBeFalsy()
     expect(message()).toContain('expected to be some, but was none')
   })
@@ -97,6 +104,12 @@ describe('toBeRight', () => {
     expect(message()).toContain('expected to be right, but was left')
   })
 
+  it('fails on left without checking value', () => {
+    const { pass, message } = toBeRightMatcher(true, E.left('wrong value'))
+    expect(pass).toBeFalsy()
+    expect(message()).toContain('expected to be right, but was left')
+  })
+
   it('fails on left even with correct value', () => {
     const { pass, message } = toBeRightMatcher(true, E.left('value'), 'value')
     expect(pass).toBeFalsy()
@@ -161,4 +174,14 @@ describe('with Eq', () => {
     const { pass: passWithEq } = toBeRightMatcher(true, E.right(v1), v2, eq)
     expect(passWithEq).toBeTruthy()
   })
+})
+
+test('formatter can return diff string as-is', () => {
+  const result = formattedDiffString(
+    'myMatcher',
+    { aAnnotation: 'Test' },
+    'foo'
+  )('bar')
+  expect(result).toContain('Expected: ')
+  expect(result).toContain('Received: ')
 })

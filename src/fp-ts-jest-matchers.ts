@@ -130,7 +130,7 @@ export const toBeRightMatcher = <E, A>(
   }
 }
 
-const formattedDiffString = <A>(
+export const formattedDiffString = <A>(
   matcherName: string,
   options: any,
   expected: A
