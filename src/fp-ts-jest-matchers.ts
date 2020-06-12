@@ -5,17 +5,6 @@ import diff from 'jest-diff'
 import { matcherHint, printExpected, printReceived } from 'jest-matcher-utils'
 import { Eq, eqStrict } from 'fp-ts/lib/Eq'
 
-declare global {
-  namespace jest {
-    interface Matchers<R> {
-      toBeNone(value?: any, eq?: Eq<any>): R
-      toBeSome(value?: any, eq?: Eq<any>): R
-      toBeLeft(value?: any, eq?: Eq<any>): R
-      toBeRight(value?: any, eq?: Eq<any>): R
-    }
-  }
-}
-
 /**
  * This matcher allows you to expect that an `Option` is `none`.
  *
@@ -156,20 +145,3 @@ const formattedDiffString = <A>(
         `Received: ${printReceived(receivedValue)}`)
   )
 }
-
-expect.extend({
-  toBeNone: toBeNoneMatcher,
-  toBeSome<A> (received: O.Option<A>, expected?: A, eq: Eq<A> = eqStrict) {
-    return toBeSomeMatcher(!!this.expand, received, expected, eq)
-  },
-  toBeLeft<E, A> (
-    received: E.Either<E, A>,
-    expected?: E,
-    eq: Eq<E> = eqStrict
-  ) {
-    return toBeLeftMatcher(!!this.expand, received, expected, eq)
-  },
-  toBeRight<E, A> (received: E.Either<E, A>, expected?: A, eq?: Eq<A>) {
-    return toBeRightMatcher(!!this.expand, received, expected, eq)
-  }
-})
