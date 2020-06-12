@@ -1,4 +1,5 @@
 # Jest Matchers for fp-ts
+
 ![Build and test](https://github.com/svdo/fp-ts-jest-matchers/workflows/Build%20and%20test/badge.svg)
 ![npm](https://img.shields.io/npm/v/fp-ts-jest-matchers)
 
@@ -71,6 +72,5 @@ it('can test fp-ts eithers', () => {
     expect(E.right(['a', 'b'])).toBeRight(['a', 'b'], A.getEq(eqString))
 })
 ```
-
 
 [fp-ts]: https://gcanti.github.io/fp-ts/
