@@ -1,5 +1,6 @@
 # Jest Matchers for fp-ts
 ![Build and test](https://github.com/svdo/fp-ts-jest-matchers/workflows/Build%20and%20test/badge.svg)
+![npm](https://img.shields.io/npm/v/fp-ts-jest-matchers)
 
 This library provides Jest matchers to nicely test code based on
 [`fp-ts`][fp-ts]. Currently it provides matchers for `Option` and `Either`.
