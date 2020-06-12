@@ -1,6 +1,6 @@
 {
   "name": "fp-ts-jest-matchers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Jest matchers to nicely test code using fp-ts",
   "repository": {
     "type": "git",
