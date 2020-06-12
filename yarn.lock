@@ -7,5 +7,7 @@ __metadata:
 "fp-ts-jest-matchers@workspace:.":
   version: 0.0.0-use.local
   resolution: "fp-ts-jest-matchers@workspace:."
+  peerDependencies:
+    fp-ts: ^2.5.0
   languageName: unknown
   linkType: soft
