@@ -1,5 +1,10 @@
 {
   "name": "fp-ts-jest-matchers",
+  "version": "1.0.0",
+  "description": "Jest matchers to nicely test code using fp-ts",
+  "main": "dist/index.js",
+  "types": "dist/types.d.ts",
+  "license": "MIT",
   "scripts": {
     "lint": "yarn type-check && tslint --project tsconfig.json -t codeFrame 'src/**/*.ts*'",
     "test": "yarn lint && yarn jest --coverage",
