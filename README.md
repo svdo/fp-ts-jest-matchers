@@ -40,7 +40,7 @@ import * as A from 'fp-ts/lib/Array'
 
 it('can test fp-ts options', () => {
     // Expect an option to be 'none':
-    expect(O.none.toBeNone()
+    expect(O.none).toBeNone()
 
     // Expect an option to be 'some' with any value:
     expect(O.some('value')).toBeSome()
