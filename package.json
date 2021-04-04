@@ -13,8 +13,18 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "files": ["dist", "README.md", "LICENSE", "dist/index.d.ts"],
-  "keywords": ["jest", "matchers", "extend", "fp-ts"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "dist/index.d.ts"
+  ],
+  "keywords": [
+    "jest",
+    "matchers",
+    "extend",
+    "fp-ts"
+  ],
   "author": "Stefan van den Oord <stefan.van.den.oord@philips.com>",
   "scripts": {
     "build": "tsc",
@@ -45,7 +55,9 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
-    "testPathIgnorePatterns": ["/dist/"],
+    "testPathIgnorePatterns": [
+      "/dist/"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 100,
