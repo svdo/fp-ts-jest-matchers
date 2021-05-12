@@ -4,7 +4,8 @@
 ![npm](https://img.shields.io/npm/v/fp-ts-jest-matchers)
 
 This library provides Jest matchers to nicely test code based on
-[`fp-ts`][fp-ts]. Currently it provides matchers for `Option` and `Either`.
+[`fp-ts`][fp-ts]. Currently it provides matchers for 
+[`Option`][fp-ts-option] and [`Either`][fp-ts-either].
 
 ## Installation
 
@@ -74,3 +75,5 @@ it('can test fp-ts eithers', () => {
 ```
 
 [fp-ts]: https://gcanti.github.io/fp-ts/
+[fp-ts-either]: https://gcanti.github.io/fp-ts/modules/Either.ts.html
+[fp-ts-option]: https://gcanti.github.io/fp-ts/modules/Option.ts.html
