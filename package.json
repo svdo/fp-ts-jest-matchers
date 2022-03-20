@@ -51,7 +51,10 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^9.0.0",
     "typescript": "^3.9.0",
-    "simple-git": "^3.3.0"
+
+    "simple-git": "^3.3.0",
+    "ansi-regex": "^5.0.1",
+    "json-schema": "^0.4.0"
   },
   "jest": {
     "preset": "ts-jest",
