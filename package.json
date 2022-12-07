@@ -43,18 +43,17 @@
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",
+    "ansi-regex": "^5.0.1",
     "jest": "^26.0.1",
+    "json-schema": "^0.4.0",
     "lint": "^0.7.0",
     "prettier": "^2.0.5",
+    "simple-git": "^3.5.0",
     "ts-jest": "^26.1.0",
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^9.0.0",
-    "typescript": "^3.9.0",
-
-    "simple-git": "^3.3.0",
-    "ansi-regex": "^5.0.1",
-    "json-schema": "^0.4.0"
+    "typescript": "^3.9.0"
   },
   "jest": {
     "preset": "ts-jest",
