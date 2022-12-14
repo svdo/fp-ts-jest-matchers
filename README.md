@@ -7,6 +7,10 @@ This library provides Jest matchers to nicely test code based on
 [`fp-ts`][fp-ts]. Currently it provides matchers for 
 [`Option`][fp-ts-option] and [`Either`][fp-ts-either].
 
+## Update December 2022
+
+I'm not maintianing this library at the moment. It works perfectly fine, but I'm getting tired of the security alerts in the transitive dependencies. If you want to use this, feel free to fork or something like that. Cheers!
+
 ## Installation
 
 First add the dependency to your project:
